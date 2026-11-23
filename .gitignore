@@ -1,0 +1,21 @@
+# First upload: track plotting source and documentation only.
+# Expand this allowlist when adding other project modules later.
+/*
+!/.gitignore
+!/README.md
+!/code/
+/code/*
+!/code/plotting/
+
+# Generated files inside the tracked directory.
+**/__pycache__/
+*.py[cod]
+.DS_Store
+*.fits
+*.fits.gz
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.log
+.mplconfig/
