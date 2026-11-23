@@ -1,0 +1,33 @@
+# Project-wide Matplotlib appearance.
+# This file is loaded automatically when scripts are run from the project root.
+
+# Font family and fallback fonts
+font.family: serif
+font.serif: Times New Roman, Times, DejaVu Serif
+mathtext.fontset: stix
+font.size: 12
+
+# Axes, title, and legend fonts
+axes.titlesize: 16
+axes.titleweight: normal
+axes.labelsize: 14
+axes.linewidth: 1.0
+legend.fontsize: 11
+
+# Tick fonts and direction
+xtick.labelsize: 12
+ytick.labelsize: 12
+xtick.direction: in
+ytick.direction: in
+xtick.top: False
+ytick.right: False
+xtick.major.size: 3
+ytick.major.size: 3
+xtick.minor.size: 1
+ytick.minor.size: 1
+
+# Lines and mathematical text
+lines.linewidth: 1.2
+axes.unicode_minus: True
+
+

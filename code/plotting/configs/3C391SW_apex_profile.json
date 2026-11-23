@@ -1,0 +1,49 @@
+{
+  "description": "Manual line-profile reference. Displayed temperature = T_mb * multipliers[transition] + baselines_K[family]. Edit per-source values; ylim=null recomputes vertical limits without changing offsets or multipliers.",
+  "initialized_from": "output/broad_lines/summary.json:target_layouts",
+  "global_rules": {
+    "transition_labels": {
+      "12CO10": "$^{12}$CO J=1-0",
+      "12CO21": "$^{12}$CO J=2-1",
+      "12CO43": "$^{12}$CO J=4-3",
+      "HCO+10": "HCO$^+$ J=1-0",
+      "HCO+32": "HCO$^+$ J=3-2",
+      "HCN10": "HCN J=1-0",
+      "HCN32": "HCN J=3-2",
+      "SiO21": "SiO J=2-1"
+    }
+  },
+  "target_layouts": {
+    "3C391SW": {
+      "xlim": [
+        -10,
+        180
+      ],
+      "ylim": null,
+      "baselines_K": {
+        "CO": 0.0,
+        "apex CO(2–1)": -10.0,
+        "HCO+": -20.0,
+        "HCN": -35.0,
+        "SiO": -40.0
+      },
+      "multipliers": {
+        "12CO10": 1,
+        "12CO21": 1,
+        "12CO43": 1,
+        "HCO+10": 10,
+        "HCO+32": 10,
+        "HCN10": 10,
+        "HCN32": 10,
+        "SiO21": 50,
+        "12CO21_apex": 1
+      }
+    }
+  },
+  "_comments": {
+    "baselines_K": "Fixed display offsets in kelvin, applied after multiplying Tmb by the display multiplier; CO 0, APEX -10, HCO+ -20, HCN -35, SiO -40. No effect on physical intensity or beam calibration.",
+    "multipliers": "Fixed dimensionless linear display factors multiplying Tmb; not sampled and not log10.",
+    "xlim": "Fixed velocity display bounds in km/s.",
+    "ylim": "null requests automatic display bounds in kelvin."
+  }
+}
